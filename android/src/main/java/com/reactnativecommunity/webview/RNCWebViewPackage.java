@@ -1,5 +1,5 @@
 
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.jotformwebview;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,15 +12,15 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
 
-public class RNCWebViewPackage implements ReactPackage {
+public class RNCJotFormWebViewPackage implements ReactPackage {
 
-    private RNCWebViewManager manager;
-    private RNCWebViewModule module;
+    private RNCJotFormWebViewManager manager;
+    private RNCJotFormWebViewModule module;
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
       List<NativeModule> modulesList = new ArrayList<>();
-      module = new RNCWebViewModule(reactContext);
+      module = new RNCJotFormWebViewModule(reactContext);
       module.setPackage(this);
       modulesList.add(module);
       return modulesList;
@@ -33,12 +33,12 @@ public class RNCWebViewPackage implements ReactPackage {
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
-      manager = new RNCWebViewManager();
+      manager = new RNCJotFormWebViewManager();
       manager.setPackage(this);
       return Arrays.<ViewManager>asList(manager);
     }
 
-    public RNCWebViewModule getModule() {
+    public RNCJotFormWebViewModule getModule() {
       return module;
     }
 }

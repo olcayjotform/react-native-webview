@@ -15,7 +15,7 @@ The simplest way to use the WebView is to simply pipe in the HTML you want to di
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-jotform-webview';
 
 class MyInlineWeb extends Component {
   render() {
@@ -37,7 +37,7 @@ This is the most common use-case for WebView.
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-jotform-webview';
 
 class MyWeb extends Component {
   render() {
@@ -93,7 +93,7 @@ Add permission in AndroidManifest.xml:
 File Upload using `<input type="file" />` is not supported for Android 4.4 KitKat (see [details](https://github.com/delight-im/Android-AdvancedWebView/issues/4#issuecomment-70372146)):
 
 ```
-import { WebView } from "react-native-webview";
+import { WebView } from "react-native-jotform-webview";
 
 WebView.isFileUploadSupported().then(res => {
   if (res === true) {

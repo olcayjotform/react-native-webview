@@ -189,7 +189,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
       );
     } else if (this.state.viewState !== WebViewState.IDLE) {
       console.error(
-        'RNCWebView invalid state encountered: ' + this.state.viewState,
+        'RNCJotFormWebView invalid state encountered: ' + this.state.viewState,
       );
     }
 

@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.jotformwebview;
 
 import android.support.v4.content.FileProvider;
 
@@ -7,7 +7,7 @@ import android.support.v4.content.FileProvider;
  *
  * See https://developer.android.com/guide/topics/manifest/provider-element.html for details.
  */
-public class RNCWebViewFileProvider extends FileProvider {
+public class RNCJotFormWebViewFileProvider extends FileProvider {
 
   // This class intentionally left blank.
 

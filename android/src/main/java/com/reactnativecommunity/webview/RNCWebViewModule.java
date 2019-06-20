@@ -1,5 +1,5 @@
 
-package com.reactnativecommunity.webview;
+package com.reactnativecommunity.jotformwebview;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -26,10 +26,10 @@ import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
 
-public class RNCWebViewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
+public class RNCJotFormWebViewModule extends ReactContextBaseJavaModule implements ActivityEventListener {
 
   private final ReactApplicationContext reactContext;
-  private RNCWebViewPackage aPackage;
+  private RNCJotFormWebViewPackage aPackage;
 
   private static final int PICKER = 1;
   private static final int PICKER_LEGACY = 3;
@@ -40,7 +40,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
 
   final String DEFAULT_MIME_TYPES = "*/*";
 
-  public RNCWebViewModule(ReactApplicationContext reactContext) {
+  public RNCJotFormWebViewModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
     reactContext.addActivityEventListener(this);
@@ -48,7 +48,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
 
   @Override
   public String getName() {
-    return "RNCWebView";
+    return "RNCJotFormWebView";
   }
 
   @ReactMethod
@@ -146,7 +146,7 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
       if (chooserIntent.resolveActivity(getCurrentActivity().getPackageManager()) != null) {
           getCurrentActivity().startActivityForResult(chooserIntent, PICKER_LEGACY);
       } else {
-          Log.w("RNCWebViewModule", "there is no Activity to handle this Intent");
+          Log.w("RNCJotFormWebViewModule", "there is no Activity to handle this Intent");
       }
   }
 
@@ -171,17 +171,17 @@ public class RNCWebViewModule extends ReactContextBaseJavaModule implements Acti
     if (chooserIntent.resolveActivity(getCurrentActivity().getPackageManager()) != null) {
         getCurrentActivity().startActivityForResult(chooserIntent, PICKER);
     } else {
-        Log.w("RNCWebViewModule", "there is no Activity to handle this Intent");
+        Log.w("RNCJotFormWebViewModule", "there is no Activity to handle this Intent");
     }
 
     return true;
   }
 
-  public RNCWebViewPackage getPackage() {
+  public RNCJotFormWebViewPackage getPackage() {
     return this.aPackage;
   }
 
-  public void setPackage(RNCWebViewPackage aPackage) {
+  public void setPackage(RNCJotFormWebViewPackage aPackage) {
     this.aPackage = aPackage;
   }
 

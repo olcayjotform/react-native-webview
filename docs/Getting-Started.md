@@ -2,10 +2,10 @@
 
 Here's how to get started quickly with the React Native WebView.
 
-#### 1. Add react-native-webview to your dependencies
+#### 1. Add react-native-jotform-webview to your dependencies
 
 ```
-$ npm install --save https://github.com/react-native-community/react-native-webview
+$ npm install --save https://github.com/react-native-community/react-native-jotform-webview
 ```
 
 #### 2. Link native dependencies
@@ -15,16 +15,16 @@ React Native modules that include native Objective-C, Swift, Java, or Kotlin cod
 Thankfully, there's a way to do this from the terminal with one command:
 
 ```
-$ react-native link react-native-webview
+$ react-native link react-native-jotform-webview
 ```
 
-_NOTE: If you ever need to uninstall React Native WebView, run `react-native unlink react-native-webview` to unlink it._
+_NOTE: If you ever need to uninstall React Native WebView, run `react-native unlink react-native-jotform-webview` to unlink it._
 
 #### 3. Import the webview into your component
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-jotform-webview';
 
 class MyWeb extends Component {
   render() {
@@ -42,7 +42,7 @@ Minimal example with inline HTML:
 
 ```js
 import React, { Component } from 'react';
-import { WebView } from 'react-native-webview';
+import { WebView } from 'react-native-jotform-webview';
 
 class MyInlineWeb extends Component {
   render() {

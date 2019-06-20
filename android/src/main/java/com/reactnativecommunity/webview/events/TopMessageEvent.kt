@@ -1,4 +1,4 @@
-package com.reactnativecommunity.webview.events
+package com.reactnativecommunity.jotformwebview.events
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.uimanager.events.Event

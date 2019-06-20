@@ -11,8 +11,8 @@ After you fork the repo, clone it to your machine, and make your changes, you'll
 In a new `react-native init` project, do this:
 
 ```
-$ yarn add ../react-native-webview
-$ react-native link react-native-webview
+$ yarn add ../react-native-jotform-webview
+$ react-native link react-native-jotform-webview
 ```
 
 You may run into a problem where the `jest-haste-map` module map says react-native was added twice:
@@ -20,13 +20,13 @@ You may run into a problem where the `jest-haste-map` module map says react-nati
 ```
 Loading dependency graph...(node:32651) UnhandledPromiseRejectionWarning: Error: jest-haste-map: Haste module naming collision:
   Duplicate module name: react-native
-  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-webview/node_modules/react-native/package.json
+  Paths: /Users/myuser/TestApp/node_modules/react-native/package.json collides with /Users/myuser/TestApp/node_modules/react-native-jotform-webview/node_modules/react-native/package.json
 ```
 
 Just remove the second path like this:
 
 ```
-$ rm -rf ./node_modules/react-native-webview/node_modules/react-native
+$ rm -rf ./node_modules/react-native-jotform-webview/node_modules/react-native
 ```
 
 And then re-run the packager:
@@ -35,11 +35,11 @@ And then re-run the packager:
 $ react-native start --reset-cache
 ```
 
-When you make a change, you'll probably need to unlink, remove, re-add, and re-link `react-native-webview`:
+When you make a change, you'll probably need to unlink, remove, re-add, and re-link `react-native-jotform-webview`:
 
 ```
-$ react-native unlink react-native-webview && yarn remove react-native-webview
-$ yarn add ../react-native-webview && react-native link react-native-webview
+$ react-native unlink react-native-jotform-webview && yarn remove react-native-jotform-webview
+$ yarn add ../react-native-jotform-webview && react-native link react-native-jotform-webview
 ```
 
 ## Notes

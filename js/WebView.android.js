@@ -74,7 +74,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
 
   static isFileUploadSupported = async () => {
     // native implementation should return "true" only for Android 5+
-    return NativeModules.RNCWebView.isFileUploadSupported();
+    return NativeModules.RNCJotFormWebView.isFileUploadSupported();
   }
 
   state = {
@@ -101,7 +101,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
         );
     } else if (this.state.viewState !== WebViewState.IDLE) {
       console.error(
-        'RNCWebView invalid state encountered: ' + this.state.viewState,
+        'RNCJotFormWebView invalid state encountered: ' + this.state.viewState,
       );
     }
 
@@ -135,7 +135,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
       WebViewShared.originWhitelistToRegex,
     );
 
-    let NativeWebView = nativeConfig.component || RNCWebView;
+    let NativeWebView = nativeConfig.component || RNCJotFormWebView;
 
     const webView = (
       <NativeWebView
@@ -189,7 +189,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   goForward = () => {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.goForward,
+      UIManager.RNCJotFormWebView.Commands.goForward,
       null,
     );
   };
@@ -197,7 +197,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   goBack = () => {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.goBack,
+      UIManager.RNCJotFormWebView.Commands.goBack,
       null,
     );
   };
@@ -208,7 +208,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
     });
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.reload,
+      UIManager.RNCJotFormWebView.Commands.reload,
       null,
     );
   };
@@ -216,7 +216,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   stopLoading = () => {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.stopLoading,
+      UIManager.RNCJotFormWebView.Commands.stopLoading,
       null,
     );
   };
@@ -224,7 +224,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   postMessage = (data: string) => {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.postMessage,
+      UIManager.RNCJotFormWebView.Commands.postMessage,
       [String(data)],
     );
   };
@@ -238,7 +238,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   injectJavaScript = (data: string) => {
     UIManager.dispatchViewManagerCommand(
       this.getWebViewHandle(),
-      UIManager.RNCWebView.Commands.injectJavaScript,
+      UIManager.RNCJotFormWebView.Commands.injectJavaScript,
       [data],
     );
   };
@@ -297,7 +297,7 @@ class WebView extends React.Component<WebViewSharedProps, State> {
   }
 }
 
-const RNCWebView = requireNativeComponent('RNCWebView');
+const RNCJotFormWebView = requireNativeComponent('RNCJotFormWebView');
 
 const styles = StyleSheet.create({
   container: {

@@ -17,20 +17,20 @@ If you need the exact same WebView as the one from react-native, please use vers
 ## Getting Started
 
 ```
-$ yarn add react-native-webview
-$ react-native link react-native-webview
+$ yarn add react-native-jotform-webview
+$ react-native link react-native-jotform-webview
 ```
 
 Read our [Getting Started Guide](./docs/Getting-Started.md) for more.
 
 ## Usage
 
-Import the `WebView` component from `react-native-webview` and use it like so:
+Import the `WebView` component from `react-native-jotform-webview` and use it like so:
 
 ```jsx
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { WebView } from "react-native-webview";
+import { WebView } from "react-native-jotform-webview";
 
 // ...
 class MyWebComponent extends Component {
