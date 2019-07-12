@@ -361,6 +361,7 @@ public class RNCJotFormWebViewManager extends SimpleViewManager<WebView> {
           "window.originalPostMessage = window.postMessage," +
           "window.postMessage = function(data) {" +
             BRIDGE_NAME + ".postMessage(String(data));" +
+            "window.originalPostMessage(String(data));" +
           "}" +
         ")");
       }
